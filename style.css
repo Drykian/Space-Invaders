@@ -16,3 +16,8 @@ body {
     top: 200px;
     left: 610px;
 }
+.score {
+    position: fixed;
+    color: white;
+    left: 433px;
+}
