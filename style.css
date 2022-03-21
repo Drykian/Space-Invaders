@@ -1,0 +1,18 @@
+body {
+    background-color: black;
+}
+
+.ship {
+    position: fixed;
+}
+
+.heart {
+    position: relative;
+    margin: 2px;
+}
+
+.gameOverScreen {
+    position: fixed;
+    top: 200px;
+    left: 610px;
+}
