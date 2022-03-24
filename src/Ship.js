@@ -8,6 +8,7 @@ export class Ship extends Entity{
         this.setY(window.innerHeight - 95);
         this.invulnerable = false
         this.lives = 3
+        this.canShoot = true
     }
     moveRight(move){
         if (move && (this.x < 933)) {
@@ -17,6 +18,13 @@ export class Ship extends Entity{
     moveLeft(move){
         if (move && (this.x > 433)){
             this.setX(this.x - this.speed)
+        }
+    }
+    shoot({createBullet}){
+        if(this.canShoot){
+            this.canShoot = false
+            createBullet({x: this.x + 35, y: this.y - 15})
+            setTimeout(()=> this.canShoot = true, 1000)
         }
     }
     loseLife(){
