@@ -28,14 +28,14 @@ export class Ship extends Entity{
         }
     }
     loseLife(){
-        var flickingTimes = 10
+        var flickeringTimes = 10
         this.invulnerable = true
         this.el.remove();
         var shipFlickering = setInterval(()=> {
             this.el.remove();
             setTimeout(() => document.body.appendChild(this.el), 75)
-            flickingTimes -= 1
-            if (flickingTimes < 0){
+            flickeringTimes -= 1
+            if (flickeringTimes < 0){
                 this.invulnerable = false
                 clearInterval(shipFlickering)
             }
